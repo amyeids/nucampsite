@@ -1,0 +1,32 @@
+body {
+    font-family: "Open Sans", sans-serif; /* add second font sans-serif in case for some reason the browser is unable to load the first one */
+} 
+
+h1, h2, h3 {
+    font-family: "Lobster", cursive;
+}
+
+h2 {
+    color: #3046C5;
+}
+
+header h2 {
+    color: #CEC8FF;
+}
+
+footer {
+    background-image:linear-gradient(#CEC8FF, white); /*creating custom background image using gradient */
+    padding: 20px 0;
+}
+
+.jumbotron {
+    padding: 30px;
+    background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
+    color: white;
+}
+
+.row-content {
+    padding: 50 px 0; /*50 px on the top and bottom, 0 on the left and right */
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
