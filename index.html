@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <!-- Additional CSS must be placed after Bootstrap CSS to ensure it overrides-->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>NuCamp: A Better Way To Camp</title>
@@ -25,6 +26,22 @@
             </div>
         </div>
     </header>
+    
+     <nav class="navbar navbar-expand-sm navbar-dark sticky-top"> <!-- Navbar is base bootstrap class to use other classes, navbar-dark is bootstrap class to make font lighter on dark nav bars  -->
+        <div class="container"> <!-- put nav into container to change the padding-->
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar"> <!-- ml-auto changes nav to the right side  -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nucampNavbar">
+                <ul class="navbar-nav"> 
+                    <li class="nav-item active"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li> <!-- # in href means to go to the top of the page -->
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a></li> <!-- Nav item class helps with appearance in bootstrap -->
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
+                </ul> <!-- the fa class is a base class to use awesome fonts icons, then you add the class you want for each icon-->
+            </div>
+        </div>
+    </nav>
 
     <div class="container">
         <div class="row row-content align-items-center"> <!-- align items center is used on rows, will align content vertically -->
@@ -56,7 +73,7 @@
         </div>
     </div>
     <footer>
-        <div class="containter">
+        <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-2 offset-1"> <!-- offset class force a bootstrap column to the right -->
                     <h5>Links</h5>
@@ -69,14 +86,14 @@
                 </div>
                 <div class="col-6 col-sm-5 text-center">
                     <h5>Social</h5>
-                    <a href="http://instagram.com/">Instagram</a>
-                    <a href="http://facebook.com/">Facebook</a>
-                    <a href="http://twitter.com/">Twitter</a>
-                    <a href="http://youtube.com/">YouTube</a>
+                    <a href="http://instagram.com/"><i class="fa fa-instagram fa-lg"></i></a>
+                    <a href="http://facebook.com/"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    Tel: 1-206-555-1234<br />
-                    Email: campsites@nucamp.co
+                    <i class="fa fa-phone fa-lg"></i>: 1-206-555-1234<br />
+                    <i class="fa fa-envelope fa-lg"></i>: campsites@nucamp.co
                 </div>
             </div>
         </div>
