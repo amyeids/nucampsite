@@ -20,21 +20,23 @@
 
 <body>
 
-    <header class="jumbotron jumbotron-fluid">
+    <header class="jumbotron jumbotron-fluid"> <!-- jumbotron to call attention to a key element, fluid to get rid of the default rounded corners -->
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <h1>NuCamp</h1>
-                    <h2>a better way to camp</h2>
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <a href="index.html"><img src="img/logo.png"class="img-fluid"></a>
                 </div>
+                    <div class="col">
+                        <h1>NuCamp</h1>
+                        <h2>A better way to camp</h2>
+                    </div>
             </div>
         </div>
     </header>
-
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-        <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-                <span class="navbar-toggler-icon"></span>
+    
+     <nav class="navbar navbar-expand-sm navbar-dark sticky-top"> <!-- Navbar is base bootstrap class to use other classes, navbar-dark is bootstrap class to make font lighter on dark nav bars  -->
+        <div class="container"> <!-- put nav into container to change the padding-->
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30"></a>
             </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
                 <ul class="navbar-nav">
