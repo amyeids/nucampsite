@@ -27,7 +27,7 @@ footer {
 }
 
 .row-content {
-    padding: 50 px 0; /*50 px on the top and bottom, 0 on the left and right */
+    padding: 50px 0; /*50 px on the top and bottom, 0 on the left and right */
     border-bottom: 1px ridge;
     min-height: 200px;
 }
