@@ -32,7 +32,7 @@ footer {
     min-height: 200px;
 }
 
-.navbar {
+.navbar-dark{
     background-color: #901CAD;
 }
 
@@ -41,3 +41,11 @@ footer {
     border-top: none;
     padding: 10px;
 }
+
+.carousel-caption {
+    background-color: rgb(0, 0, 0, 0.5) /* use rgba to have access to alpha channel- last number is alpha channel, which indicates opacity */
+ } /*adding transparent black background to carousel caption */
+
+ .carousel {
+     border: solid #5637DD;
+ }
