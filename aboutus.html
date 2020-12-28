@@ -16,11 +16,14 @@
 </head>
 
 <body>
+
+    <!--  HEADER  -->
+
     <header class="jumbotron jumbotron-fluid"> <!-- jumbotron to call attention to a key element, fluid to get rid of the default rounded corners -->
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <a href="index.html"><img src="img/logo.png"class="img-fluid"></a>
+                    <a href="index.html"><img src="img/logo.png" class="img-fluid"></a>
                 </div>
                     <div class="col">
                         <h1>NuCamp</h1>
@@ -30,6 +33,9 @@
         </div>
     </header>
     
+
+    <!--  NAVBAR  -->
+
      <nav class="navbar navbar-expand-sm navbar-dark sticky-top"> <!-- Navbar is base bootstrap class to use other classes, navbar-dark is bootstrap class to make font lighter on dark nav bars  -->
         <div class="container"> <!-- put nav into container to change the padding-->
             <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30"></a>
@@ -46,6 +52,9 @@
             </div>
         </div>
     </nav>
+
+
+<!--  MAIN PAGE CONTENT  -->
 
     <div class="container">
         <div class="row">
@@ -94,35 +103,70 @@
             </div>
         </div>
 
+<!--  COMMUNITY PARTNERS ACCORDION  -->
+
         <div class="row row-content">
             <div class="col">
                 <h3>Community Partners</h3>
-                <ul class="nav nav-tabs">
-                    <li class="nav-item"><a class="nav-link active" href="#bootstrap" role="tab" data-toggle="tab">Bootstrap Outfitters</a></li> <!-- nav link active makes it default first tab upon page loading-->
-                    <li class="nav-item"><a class="nav-link" href="#git" role="tab" data-toggle="tab">Git Out Expeditions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#mongo" role="tab" data-toggle="tab">Mongo Fly Shop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#node" role="tab" data-toggle="tab">Node Outdoor Apparel</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade show active" id="bootstrap">
-                        <h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small></h4>
-                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                <div id="accordion">
+                    <div class="card">
+                        <div role="tab" class="card-header">
+                            <h4>
+                                <a data-toggle="collapse" data-target="#bootstrap">Bootstrap Outfitters <small>Outdoor Gear Specialists</small>
+                                </a>
+                            </h4>
+                            <div class="collapse show" id="bootstrap" data-parent="#accordion"> <!--#accordion matches up with the id-->
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                                </div>       
+                            </div>                
+                        </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="git">
-                        <h4>Git Out Expeditions <small>Group Adventure Expeditions</small></h4>
-                        <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
+                    <div class="card">
+                        <div role="tab" class="card-header">
+                            <h4>
+                                <a class="collapsed" data-toggle="collapse" data-target="#git">Git Out Expeditions <small>Group Adventure Expeditions</small>
+                                </a>
+                            </h4>
+                            <div class="collapse" id="git" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="mongo">
-                        <h4>Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small></h4>
-                        <p class="d-none d-sm-block">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p> <!-- fade class gives subtle fade effect when you switch between tabs-->
+                    <div class="card">
+                        <div role="tab" class="card-header">
+                            <h4>
+                                <a class="collapsed" data-toggle="collapse" data-target="#mongo">Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small>
+                                </a>
+                            </h4>
+                            <div class="collapse" id="mongo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p> <!-- fade class gives subtle fade effect when you switch between tabs-->
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="node">
-                        <h4>Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small></h4>
-                        <p class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+                    <div class="card">
+                        <div role="tab" class="card-header">
+                            <h4>
+                                <a class="collapsed" data-toggle="collapse" data-target="#node">Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small>
+                                </a>
+                            </h4>
+                            <div class="collapse" id="node" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+<!-- FACTS AT A GLANCE TABLE-->
+
         <div class="row row-content">
             <div class="col-sm-9">
                 <h2>Facts &amp; Figures</h2>

@@ -17,6 +17,8 @@
 
 <body>
 
+    <!--  HEADER  -->
+
     <header class="jumbotron jumbotron-fluid"> <!-- jumbotron to call attention to a key element, fluid to get rid of the default rounded corners -->
         <div class="container">
             <div class="row">
@@ -28,7 +30,7 @@
                         <h2>A better way to camp</h2>
                     </div>
                     <div class="col-md-4 mt-4 col-xl-2">
-                        <a href="#reserveForm"><button class="btn-lg btn btn-info text-nowrap">Reserve Campsite</button></a>
+                        <a href="#reserveForm" role="button" class="btn btn-lg btn-info text-nowrap" data-toggle="tooltip" data-placement= "bottom" data-html="true" title="Or call us at<br /><strong>1-206-555-1234</strong>">Reserve Campsite</a> <!--data-toggle and title are the only 2 attributes you must have to create a tooltip. must add data-html=true to make the html in the title work so it will show bold -->
                     </div>
             </div>
         </div>
@@ -52,9 +54,55 @@
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul> <!-- the fa class is a base class to use awesome fonts icons, then you add the class you want for each icon-->
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in"></i> Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
+
+<!--  LOGIN MODAL  -->
+
+    <div id="loginModal" class="modal fade" role="dialog"> <!--id matches the data-target in the span above. fade for subtle fade effect when open/closing. role of dialog for accessibility reasons-->
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button> <!--times is an html character entity, to  make an X button-->
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEmail">Email address</label> <!--sr only makes the text only visible to screen readers-->
+                                    <input type="email" class="form-control form-control-sm" placeholder="Enter Email" id="loginEmail">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input">
+                                        <label class="form-check-label">Remember Me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--  MAIN CONTENT  -->
 
     <div class="container">
         <div class="row row-content align-items-center"> <!-- align items center is used on rows, will align content vertically -->
@@ -172,14 +220,21 @@
                     <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a> <!--mailto is another protocol to send an email when clicked-->
                 </div>
             </div>
-
+        </div>
     </footer>
+
+<!--  SCRIPTS  -->
 
       <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
       <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-      <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+      <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> <!--popper.js is a library that's required for popovers, tooltips, and most dropdown menus in bootstrap-->
       <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+      <script> 
+          $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+          })
+       </script> // tooltips are opt in, and must be initialized, so we must add the above JS in the form of Jqeury that Bootstrap provides to initialize tooltips
 </body>
 
 </html>
