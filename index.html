@@ -204,10 +204,18 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                <div class="btn-group" id="carouselButton">
+                    <button class="btn btn-sm btn-danger" id="carouselPause">
+                        <i class="fa fa-pause"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger" id="carouselPlay">
+                        <i class="fa fa-play"></i>
+                    </button>
+                </div>
                 </div> <!-- slide is bootstrap class for aesthetics. data-ride tells the browser to start the carousel upon page load-->
             </div>
-
         </div>
+
         <div class="row row-content align-items-center"> <!-- align items center is used on rows, will align content vertically -->
             <div class="col-sm-4 order-sm-last col-md-3"> <!-- order small last will apply the small viewport -->
                 <h2 class="text-sm-right">Discover & Review</h2>
@@ -289,6 +297,20 @@
       <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
       <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> <!--popper.js is a library that's required for popovers, tooltips, and most dropdown menus in bootstrap-->
       <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+       <!--  dollar sign below indicates you are going to start some jquery -->
+      <script>
+          $(function() {
+            $(".carousel").carousel( { interval: 2000, pause: "false" } );
+            $("#carouselPause").click(function(){
+                $(".carousel").carousel("pause");
+            });
+            $("#carouselPlay").click(function(){
+                $(".carousel").carousel("cycle");
+            });
+          });
+      </script>
+      <!-- the above function line is called the ready method in jquery- it tells the browser that when the document is finished loading and ready to run a script, run whats in this code block -->
 
 </body>
 
