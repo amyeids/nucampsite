@@ -37,7 +37,8 @@ footer {
   padding: 10px; }
 
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+  /* use rgba to have access to alpha channel- last number is alpha channel, which indicates opacity */ }
 
 /*adding transparent black background to carousel caption */
 .carousel {
@@ -49,3 +50,11 @@ footer {
   bottom: 0;
   z-index: 100;
   /* z-index ensures the buttons appear overlaid on top of the carousel instead of hidden underneath */ }
+
+#reserveModal .modal-header {
+  background-color: #17A2B8;
+  color: white; }
+
+#loginModal .modal-header {
+  background-color: #901CAD;
+  color: white; }

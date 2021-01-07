@@ -4,6 +4,7 @@ $color-pale: #CEC8FF;
 $color-mid: #901CAD;
 $color-dark: #60106b;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
+$color-teal: #17A2B8;
 
 $body-font: "Open Sans", sans-serif; /* add second font sans-serif in case for some reason the browser is unable to load the first one */
 $header-font: "Lobster", cursive;
@@ -57,7 +58,7 @@ footer {
 }
 
 .carousel-caption {
-    background-color: $color-black-transparent /* use rgba to have access to alpha channel- last number is alpha channel, which indicates opacity */
+    background-color: $color-black-transparent; /* use rgba to have access to alpha channel- last number is alpha channel, which indicates opacity */
  } /*adding transparent black background to carousel caption */
 
  .carousel {
@@ -70,3 +71,18 @@ footer {
      bottom:0;
      z-index: 100; /* z-index ensures the buttons appear overlaid on top of the carousel instead of hidden underneath */
  }
+
+
+#reserveModal {
+    .modal-header {
+        background-color: $color-teal;
+        color: white;
+    }
+}
+
+#loginModal {
+    .modal-header {
+        background-color: $color-mid;
+        color: white;
+    }
+}

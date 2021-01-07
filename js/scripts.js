@@ -15,3 +15,14 @@ $(function() {
   });
 });
 // the above function line is called the ready method in jquery- it tells the browser that when the document is finished loading and ready to run a script, run whats in this code block. .children looks for children .hasclass looks for classes
+$(function(){
+  $("#reserveButton").click(function(){
+    $("#reserveModal").modal('show');
+  });
+});
+
+$(function(){
+  $("#loginButton").click(function(){
+    $("#loginModal").modal('show');
+  });
+});
